@@ -6,7 +6,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('http://localhost:8081/hello', {
+      const res = await fetch('https://go-cors-test-production.up.railway.app/hello', {
         method: 'GET',
         headers: {
           'Access-Control-Allow-Origin': '*',
