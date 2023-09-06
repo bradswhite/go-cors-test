@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Get to client repo
-        run: cd client
+        run: cd ./client
 
       - name: Checkout repo
         uses: actions/checkout@v2
