@@ -2,9 +2,20 @@ package main
 
 import (
 	"log"
+	"os"
+	_ "github.com/joho/godotenv/autoload"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
+
+func getPort() string {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+	return ":" + port
+}
+
 
 func main() {
 	app := fiber.New()
@@ -18,5 +29,5 @@ func main() {
 		return c.SendString("Hello world!")
 	})
 
-	log.Fatal(app.Listen(":3000"))
+	log.Fatal(app.Listen(getPort()))
 }
