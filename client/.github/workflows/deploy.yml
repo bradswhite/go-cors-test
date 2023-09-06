@@ -14,9 +14,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Get to client repo
-        run: cd ./client
-
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
