@@ -5,7 +5,7 @@
 ```
 cd server
 railway init
-railway up
+railway up // make sure there is no trailing .0 in go.mod
 railway run go run .
 railway domain
 ```
